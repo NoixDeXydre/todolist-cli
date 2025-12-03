@@ -62,10 +62,6 @@ jobs:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=NoixDeXydre_todolist-cli
 
-And you are done!
-
-If everything is running successfully, once the analysis is complete you'll be redirected to the Overview page of your project 
-
     - name: Generate JaCoCo coverage report
       run: mvn jacoco:report
       
