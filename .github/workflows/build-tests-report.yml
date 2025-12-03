@@ -60,7 +60,7 @@ jobs:
     - name: Build and analyze
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=NoixDeXydre_todolist-cli
+        run: mvn -B package --file pom.xml verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=NoixDeXydre_todolist-cli
 
     - name: Generate JaCoCo coverage report
       run: mvn jacoco:report
